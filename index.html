@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Zayar</a>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Zayar</span></h1>
+            <h3 class="typing-text">I'm a <span id="typing-text"></span></h3>
+            <p>Web development has been a driving force in my life, combining my love for creativity with my passion for problem-solving. From the moment I built my first website, I was captivated by the idea of transforming ideas into interactive, dynamic experiences that users can engage with online.</p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/zayar-bhone-myint-a23374270/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Ako28" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/tofuzzxbm/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/zay_ar28/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-react"></i>
+                    <h3>React</h3>
+                </div>
+            </div>
+        </div>
+        <h2>My Education</h2>
+        <div class="education-container">
+            <div class="education-item">
+                <h3>Diploma of Information Technology</h3>
+                <p>PSB Academy, Singapore</p>
+                <span>Graduated: [2022]</span>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Information Technology</h3>
+                <p>University of Newcastle, Australia</p>
+                <span>Graduated: [2025]</span>
+            </div>
+        </div>
+    </section>
+    
+
+        
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>&copy; Zayar</h4>
+                <p class="copyright">All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for typing effect -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const typingText = document.getElementById('typing-text');
+            const words = ["Web Developer", "JavaScript Developer", "React Developer"];
+            let currentIndex = 0;
+
+            function changeWord() {
+                typingText.textContent = words[currentIndex];
+                currentIndex = (currentIndex + 1) % words.length;  // Cycle through the words
+            }
+
+            setInterval(changeWord, 2000); // Change the word every 2 seconds
+            changeWord();  // Immediately call to show the first word
+        });
+    </script>
+</body>
+
+</html>
